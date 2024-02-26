@@ -49,42 +49,11 @@ public class BankAccount {
                 sum = sum - 9;
                 digits--;
                 ans += String.valueOf(9);
-            } else if (sum == 8) {
-                sum -= 8;
+            } else {
+                int x = sum;
+                sum = sum - x;
                 digits--;
-                ans += String.valueOf(8);
-            } else if (sum == 7) {
-                sum -= 7;
-                digits--;
-                ans += String.valueOf(7);
-            } else if (sum == 6) {
-                sum -= 6;
-                digits--;
-                ans += String.valueOf(6);
-            } else if (sum == 5) {
-                sum -= 5;
-                digits--;
-                ans += String.valueOf(5);
-            } else if (sum == 4) {
-                sum -= 4;
-                digits--;
-                ans += String.valueOf(4);
-            } else if (sum == 3) {
-                sum -= 3;
-                digits--;
-                ans += String.valueOf(3);
-            } else if (sum == 2) {
-                sum -= 2;
-                digits--;
-                ans += String.valueOf(2);
-            } else if (sum == 1) {
-                sum -= 1;
-                digits--;
-                ans += String.valueOf(1);
-            } else if (sum == 0) {
-                sum -= 0;
-                digits--;
-                ans += String.valueOf(0);
+                ans += String.valueOf(x);
             }
         }
 
