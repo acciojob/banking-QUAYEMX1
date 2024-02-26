@@ -42,7 +42,7 @@ public class CurrentAccount extends BankAccount{
 
         for(Character c:mp.keySet()){
             if(mp.get(c)>n){
-                throw new Exception("Valid License can not be generated");
+                throw new Exception("Valid License can not be");
             }
         }
     }
