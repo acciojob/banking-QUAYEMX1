@@ -42,28 +42,59 @@ public class BankAccount {
         //If it is not possible, throw "Account Number can not be generated" exception
 
 
-            int ans=0;
-            while (digits > 0) {
-                if (sum >= 9) {
-                    sum = sum - 9;
-                    digits--;
-                    ans = ans * 10 + 9;
-                } else {
-                    int x = sum;
-                    sum = sum-x;
-                    digits--;
-                    ans = ans * 10 + x;
-                }
+        int ans=0;
+
+        while (digits > 0) {
+            if (sum >= 9) {
+                sum = sum - 9;
+                digits--;
+                ans=ans*10+9;
+            } else if (sum == 8) {
+                sum -= 8;
+                digits--;
+                ans=ans*10+8;
+            } else if (sum == 7) {
+                sum -= 7;
+                digits--;
+                ans=ans*10+7;
+            } else if (sum == 6) {
+                sum -= 6;
+                digits--;
+                ans=ans*10+6;
+            } else if (sum == 5) {
+                sum -= 5;
+                digits--;
+                ans=ans*10+5;
+            } else if (sum == 4) {
+                sum -= 4;
+                digits--;
+                ans=ans*10+4;
+            } else if (sum == 3) {
+                sum -= 3;
+                digits--;
+                ans=ans*10+3;
+            } else if (sum == 2) {
+                sum -= 2;
+                digits--;
+                ans=ans*10+2;
+            } else if (sum == 1) {
+                sum -= 1;
+                digits--;
+                ans=ans*10+1;
+            } else if (sum == 0) {
+                sum -= 0;
+                digits--;
+                ans=ans*10+0;
             }
-
-            String res=String.valueOf(ans);
-
-            if (sum != 0) {
-                throw new Exception("Account Number can not be generated");
-            }
-
-            return res;
         }
+
+        String res=String.valueOf(ans);
+        if (sum != 0) {
+            throw new Exception("Account Number can not be generated");
+        }
+
+        return res;
+    }
 
     public void deposit(double amount) {
         //add amount to balance
